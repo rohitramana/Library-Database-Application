@@ -14,7 +14,7 @@ connection = sqlcon.connect(host = 'localhost', user ='root',passwd='toor', data
 
 cursor = connection.cursor()
 
-with open('Test files\\borrowers.csv', 'r', encoding = "utf8") as f:
+with open('borrowers.csv', 'r', encoding = "utf8") as f:
     reader = csv.reader(f, delimiter=',')
     d=datetime.now() - timedelta(days=5*365)
     for index, row in enumerate(reader):
